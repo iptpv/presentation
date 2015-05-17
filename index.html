@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>MCSS: от теории к практике</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>MCSS: от теории к практике</h1>
+		<p>Иван Потапов</p>
+	</header>
+	<section class="slide cover" id="Cover">
+		<div>
+			<h2>MCSS: от теории к практике</h2>
+			<img src="pictures/cover.jpg" alt="">
+			<style>
+				#Cover h2 {
+					margin:140px 0 0;
+					color: #000;
+					text-align:center;
+					font-size:70px;
+				}
+				#Cover p {
+					margin:10px 0 0;
+					text-align:center;
+					color:#FFF;
+					font-style:italic;
+					font-size:20px;
+				}
+				#Cover p a {
+					color:#FFF;
+				}
+				#Cover img {
+					width: 100%;
+				}
+			</style>
+		</div>
+	</section>
+	<section class="slide" id="Why">
+		<div>
+			<h2>Почему MCSS?</h2>
+			<ol>
+				<li>БЭМ</li>
+				<ul>
+					<li>Нет правил взаимодействия модулей-слоев</li>
+					<li>Сложно использовать без специнструментов</li>
+				</ul>
+				<li>SMACSS</li>
+				<ul>
+					<li>Базовый слой содержит только layout</li>
+					<li>Не достаточно изоляции блоков</li>
+				</ul>
+			</ol>
+		</div>
+	</section>
+	<section class="slide" id="Reset">
+		<div>
+			<h2>Компоновка модулей: фундамент</h2>
+			<img src="pictures/reset.png" alt="">
+				<style>
+					#Reset img {
+						width: 100%;
+					}
+				</style>
+		</div>
+	</section>
+	<section class="slide" id="Reset-comment">
+		<div>
+			<h2>Компоновка модулей: фундамент</h2>
+			<ul>
+				<li>Reset.css, normalaize.css...</li>
+				<li>Малый вес селекторов</li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide" id="Base">
+		<div>
+			<h2>Компоновка модулей: базовый</h2>
+			<img src="pictures/base.png" alt="">
+				<style>
+					#Base img {
+						width: 100%;
+					}
+				</style>
+		</div>
+	</section>
+	<section class="slide" id="Base-comment">
+		<div>
+			<h2>Компоновка модулей: базовый</h2>
+			<ul>
+				<li>Формы, кнопки, таблицы...</li>
+				<li>Может переопределять только фунтамент</li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide" id="Project">
+		<div>
+			<h2>Компоновка модулей: проектный</h2>
+			<img src="pictures/project.png" alt="">
+				<style>
+					#Project img {
+						width: 100%;
+					}
+				</style>
+		</div>
+	</section>
+	<section class="slide" id="Project-comment">
+		<div>
+			<h2>Компоновка модулей: проектный</h2>
+			<ul>
+				<li>Формa логина, верхнее меню...</li>
+				<li>Может переопределять фундамент и базовый слой</li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide" id="All">
+		<div>
+			<h2>Компоновка модулей: косметический</h2>
+			<img src="pictures/all.png" alt="">
+				<style>
+					#All img {
+						width: 100%;
+					}
+				</style>
+		</div>
+	</section>
+	<section class="slide" id="All-comment">
+		<div>
+			<h2>Компоновка модулей: косметический</h2>
+			<ul>
+				<li>Имеет наибольший вес</li>
+				<li>Не зависит от других слоев</li>
+				<li>Глобальные модификаторы</li>
+				<li>Может отсутствовать</li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide" id="Context">
+		<div>
+			<h2>Контекст</h2>
+			<p>Стили располагаются рядом с модифицируемыми классами</p>
+			<ul>
+				<li>media queries</li>
+				<li>специфичные для браузера свойства</li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide" id="Example">
+		<div>
+			<h2>Пример</h2>
+			<pre>
+				<code>&lt;class="<mark>menu _boxing header-menu__i right_zero</mark>"&gt;</code>
+				<code>&nbsp;&lt;a class="<mark>header-menu__i__link</mark>" href="/"&gt;</code>
+				<code>&nbsp;&lt;/a&gt;</code>
+				<code>&lt;/div&gt;</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide" id="New-Project">
+		<div>
+			<h2>Начинаем делать проект</h2>
+		</div>
+	</section>
+	<section class="slide" id="Files">
+		<div>
+			<h2>Структура проекта</h2>
+			<img src="pictures/files.png" alt="">
+				<style>
+					#Files img {
+						width: 100%;
+					}
+				</style>
+		</div>
+	</section>
+	<section class="slide" id="Code-styl">
+		<div>
+			<h2>Stylus</h2>
+			<img src="pictures/code.png" alt="">
+				<style>
+					#Code img {
+						width: 40%;
+					}
+				</style>
+		</div>
+	</section>
+	<section class="slide" id="Code-js">
+		<div>
+			<h2>Javascript</h2>
+			<ul>
+				<li>Js-модуль находится рядом с файлами стилей которые использует</li>
+				<li>Используюет селекторы блока в котором определен</li>
+				<li>БезDOMные js-файлы находятся в слое фундамента и могут не иметь
+					файлов стилей (библиотека для работы с cookie, jquery...)</li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide" id="Code-template">
+		<div>
+			<h2>Шаблоны</h2>
+			<ul>
+				<li>Почему бы нет?;-)</li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Заключение</h2>
+			<ul>
+				<li>Низкий порог входа</li>
+				<li>Стало возможным быстро делать спецпроекты, благодаря
+					переиспользованию общих компонентов</li>
+				<li>Удобно писать инструменты</li>
+			</ul>
+		</div>
+	</section>
+	<div class="progress">
+		<div></div>
+	</div>
+	<script src="node_modules/shower-core/shower.min.js"></script>
+</body>
+</html>
